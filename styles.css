@@ -40,6 +40,40 @@ header {
   font-weight: 500;
 }
 
+/* Marca a la izquierda, selector de idioma a la derecha. */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.langswitch {
+  display: inline-flex;
+  border: 1px solid var(--hairline);
+  border-radius: 999px;
+  overflow: hidden;
+  background: #FFFFFF;
+  flex-shrink: 0;
+}
+
+.langswitch a,
+.langswitch span {
+  padding: 5px 13px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-decoration: none;
+  color: var(--muted);
+}
+
+/* El idioma activo no es un link: no tiene a dónde llevar. */
+.langswitch .current {
+  background: var(--mark);
+  color: #FFFFFF;
+}
+
 h1 {
   font-size: 2rem;
   line-height: 1.2;
